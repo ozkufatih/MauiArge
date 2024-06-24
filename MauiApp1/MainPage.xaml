@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiApp1;assembly=MauiApp1"
+             xmlns:pages="clr-namespace:MauiApp1.Pages;assembly=MauiApp1"
+             xmlns:controls="clr-namespace:MauiApp1.Controls;assembly=MauiApp1"
+             x:Class="MauiApp1.MainPage"
+             xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui"
+             BackgroundColor="#001c3d">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
+            <!-- Fixed height for navigation bar -->
+        </Grid.RowDefinitions>
+
+        <ContentView x:Name="ContentViewContainer" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="0">
+            <!-- Initial Content, it can be empty or any default view -->
+        </ContentView>
+
+        <!-- Navigation Panel -->
+        <controls:NavigationPanel Grid.Row="1" ContentViewContainer="{Binding Source={x:Reference ContentViewContainer}}" />
+    </Grid>
+</ContentPage>
