@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Controls.OptionListControl">
+    <VerticalStackLayout>
+
+        <ListView x:Name="listView" ItemsSource="{Binding Options}" VerticalScrollBarVisibility="Never" 
+                  HorizontalScrollBarVisibility="Never" RowHeight="75" SelectionMode="None" Loaded="ListView_Loaded" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell Tapped="ViewCell_Tapped">
+                        <Grid Padding="10" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding Name}" Grid.Column="0" VerticalOptions="Center" FontSize="18" FontAttributes="Bold"/>
+                            <Label Text="{Binding Value}" Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+    </VerticalStackLayout>
+</ContentView>

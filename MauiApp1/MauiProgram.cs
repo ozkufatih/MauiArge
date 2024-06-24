@@ -1,7 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using CommunityToolkit.Maui;
+using Microsoft.Extensions.Logging;
 using SkiaSharp.Views.Maui.Controls.Hosting;
-using CommunityToolkit.Maui;
-using CommunityToolkit.Maui.Core;
 
 namespace MauiApp1
 {
@@ -19,7 +18,6 @@ namespace MauiApp1
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
             });
-
 #if DEBUG
             builder.Logging.AddDebug();
 #endif

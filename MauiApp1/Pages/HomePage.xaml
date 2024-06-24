@@ -17,8 +17,10 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
+            <controls:LogoControl HorizontalOptions="Start" Grid.Row="0"/>
+
             <!-- Container for Pie Chart and centered elements -->
-            <Grid Grid.Row="0" Margin="10" HeightRequest="300" VerticalOptions="Start">
+            <Grid Grid.Row="1" Margin="10" HeightRequest="300" VerticalOptions="Start">
                 <!-- Pie Chart -->
                 <lvc:PieChart Series="{Binding Series}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"></lvc:PieChart>
 

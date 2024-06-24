@@ -70,11 +70,13 @@ namespace MauiApp1.ViewModels
             return new PieSeries<double>
             {
                 Values = [model.Value],
-                Pushout = 1.5,
                 MaxRadialColumnWidth = 25,
                 InnerRadius = 60,
                 Name = model.Label,
-
+                Stroke = new SolidColorPaint(SKColor.Parse("#001c3d"))
+                {
+                    StrokeThickness = 2
+                },
             };
         }
 
