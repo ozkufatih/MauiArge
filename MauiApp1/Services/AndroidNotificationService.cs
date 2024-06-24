@@ -31,7 +31,7 @@ namespace MauiApp1.Services
                 }
             }
 
-            selectedItem.Value = permissionGranted ? "Granted." : "Permission denied.";
+            selectedItem.Value = permissionGranted ? "Granted" : "Permission denied";
         }
 
         private static async Task<bool> RequestNotificationPermissionAsync()

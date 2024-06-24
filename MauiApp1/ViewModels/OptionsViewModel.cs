@@ -21,7 +21,7 @@ namespace MauiApp1.ViewModels
         public OptionsViewModel()
         {
             Options = new ObservableCollection<OptionModel>() {
-                new OptionModel("Notifications","Closed"),
+                new OptionModel("Notifications","Checking"),
                 new OptionModel("Language","English"),
                 new OptionModel("Currency","TL")
             };

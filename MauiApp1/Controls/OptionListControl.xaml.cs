@@ -36,7 +36,7 @@ public partial class OptionListControl : ContentView
         {
             if (item is OptionModel option && option.Name == "Notifications")
             {
-                option.Value = status == PermissionStatus.Granted ? "Granted." : "Permission denied.";
+                option.Value = status == PermissionStatus.Granted ? "Granted" : "Permission denied";
             }
         }
     }
