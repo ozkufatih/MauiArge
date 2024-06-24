@@ -1,15 +1,11 @@
-﻿#if ANDROID
-using Android.Content;
+﻿using Android.Content;
 using MauiApp1.Platforms.Android.MauiApp1.Platforms.Android;
-#endif
-
 using MauiApp1.Models;
 
 namespace MauiApp1.Services
 {
     public class AndroidNotificationService
     {
-#if ANDROID
         public static async Task HandleNotificationPermission(OptionModel selectedItem)
         {
             bool permissionGranted = await RequestNotificationPermissionAsync();
@@ -44,7 +40,6 @@ namespace MauiApp1.Services
             return status == PermissionStatus.Granted;
         }
 
-
         private static void OpenAppSettings()
         {
             var context = Android.App.Application.Context;
@@ -55,6 +50,5 @@ namespace MauiApp1.Services
             intent.SetFlags(ActivityFlags.NewTask);
             context.StartActivity(intent);
         }
-#endif
     }
 }
