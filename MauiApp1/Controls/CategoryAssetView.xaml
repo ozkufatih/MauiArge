@@ -10,45 +10,44 @@
         <viewmodels:CategoryAssetViewModel />
     </ContentView.BindingContext>
 
-    <ScrollView>
-        <StackLayout Padding="20">
-            <CollectionView ItemsSource="{Binding Categories}">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="models:Category">
-                        <toolkit:Expander>
-                            <toolkit:Expander.Header>
-                                <Frame Padding="10" Margin="5" CornerRadius="10" BackgroundColor="#002c5f">
-                                    <Label Text="{Binding Name}" TextColor="White" FontAttributes="Bold" FontSize="20"/>
-                                </Frame>
-                            </toolkit:Expander.Header>
-                            <toolkit:Expander.Content>
-                                <CollectionView ItemsSource="{Binding Assets}">
-                                    <CollectionView.ItemTemplate>
-                                        <DataTemplate x:DataType="models:Asset">
-                                            <Frame Padding="10" Margin="5" CornerRadius="10" BackgroundColor="#f0f0f0" >
-                                                <StackLayout Orientation="Vertical">
-                                                    <Label Text="PRICE" TextColor="Gray" FontSize="14"/>
-                                                    <StackLayout >
-                                                        <Grid>
-                                                            <Grid.RowDefinitions>
-                                                                <RowDefinition Height="Auto" />
-                                                            </Grid.RowDefinitions>
-
-                                                            <Label Grid.Row="0" Text="{Binding Name}" TextColor="Black" FontSize="18" />
-                                                            <Label Grid.Row="0" Text="{Binding Value}" TextColor="Black" FontSize="18" HorizontalOptions="End"/>
-                                                        </Grid>
-                                                    </StackLayout>
-                                                    <Label Text="{Binding Value}" TextColor="Gray" FontSize="14"/>
-                                                </StackLayout>
-                                            </Frame>
-                                        </DataTemplate>
-                                    </CollectionView.ItemTemplate>
-                                </CollectionView>
-                            </toolkit:Expander.Content>
-                        </toolkit:Expander>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </StackLayout>
-    </ScrollView>
+    <CollectionView ItemsSource="{Binding Categories}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate x:DataType="models:Category">
+                <toolkit:Expander>
+                    <toolkit:Expander.Header>
+                        <Frame x:Name="HeaderFrame" Padding="10" Margin="5" CornerRadius="10" BackgroundColor="#002c5f">
+                            <Label Text="{Binding Name}" TextColor="White" FontAttributes="Bold" FontSize="20" />
+                        </Frame>
+                    </toolkit:Expander.Header>
+                    <toolkit:Expander.Content>
+                        <CollectionView ItemsSource="{Binding Assets}">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate x:DataType="models:Asset">
+                                    <Frame Padding="10" Margin="5" CornerRadius="10" BackgroundColor="#f0f0f0" WidthRequest="{Binding Source={x:Reference HeaderFrame}, Path=Width}">
+                                        <StackLayout>
+                                            <Label Text="PRICE" TextColor="Gray" FontSize="14" />
+                                            <StackLayout>
+                                                <Grid >
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="*"/>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding Name}" TextColor="Black" FontSize="18" />
+                                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding Value}" TextColor="Black" FontSize="18" HorizontalTextAlignment="End"/>
+                                                </Grid>
+                                            </StackLayout>
+                                            <Label Text="{Binding Value}" TextColor="Gray" FontSize="14"/>
+                                        </StackLayout>
+                                    </Frame>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </toolkit:Expander.Content>
+                </toolkit:Expander>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
 </ContentView>
