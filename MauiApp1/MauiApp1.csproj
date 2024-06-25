@@ -74,13 +74,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Controls\CategoryAssetControl.xaml.cs">
+	    <DependentUpon>CategoryAssetControl.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Controls\PercentageLabelControl.xaml.cs">
 	    <DependentUpon>PercentageLabelControl.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Controls\CategoryAssetView.xaml">
+	  <MauiXaml Update="Controls\CategoryAssetControl.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Controls\LogoControl.xaml">
