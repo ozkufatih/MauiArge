@@ -1,9 +1,10 @@
 ﻿using MauiApp1.Models;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 
 namespace MauiApp1.ViewModels
 {
-    public class CategoryAssetViewModel
+    public class CategoryAssetViewModel : INotifyPropertyChanged
     {
         public ObservableCollection<Category> Categories { get; set; }
 
@@ -37,6 +38,35 @@ namespace MauiApp1.ViewModels
                     }
                 }
             };
+
+            foreach (var category in Categories)
+            {
+                category.PropertyChanged += OnCategoryPropertyChanged;
+            }
+        }
+
+        private void OnCategoryPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == nameof(Category.IsExpanded))
+            {
+                var expandedCategory = sender as Category;
+                if (expandedCategory != null && expandedCategory.IsExpanded)
+                {
+                    foreach (var category in Categories)
+                    {
+                        if (category != expandedCategory)
+                        {
+                            category.IsExpanded = false;
+                        }
+                    }
+                }
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

@@ -1,7 +1,7 @@
+using CommunityToolkit.Maui.Views;
 using MauiApp1.Models;
 using MauiApp1.Popups;
 using MauiApp1.ViewModels;
-using CommunityToolkit.Maui.Views;
 
 namespace MauiApp1.Pages;
 
@@ -10,10 +10,11 @@ public partial class HomePage : ContentView
     private DoughnutChartViewModel _viewModel;
 
     public HomePage()
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
 
         _viewModel = new DoughnutChartViewModel();
+        _viewModel.SeriesClicked += OnSeriesClicked;
         BindingContext = _viewModel;
     }
 
@@ -28,5 +29,15 @@ public partial class HomePage : ContentView
     {
         var popup = new PortfolioSelectionPopup();
         Application.Current.MainPage.ShowPopup(popup);
+    }
+
+    private void OnSeriesClicked(object sender, DoughnutChartModel model)
+    {
+        var viewModel = (CategoryAssetViewModel)CategoryAssetView.BindingContext;
+        var category = viewModel.Categories.FirstOrDefault(c => c.Name == model.Label);
+        if (category != null)
+        {
+            category.IsExpanded = true;
+        }
     }
 }

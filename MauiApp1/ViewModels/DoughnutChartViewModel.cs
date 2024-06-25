@@ -11,6 +11,8 @@ namespace MauiApp1.ViewModels
 {
     public class DoughnutChartViewModel : INotifyPropertyChanged
     {
+        public event EventHandler<DoughnutChartModel> SeriesClicked;
+
         private ObservableCollection<ISeries> _series;
         public ObservableCollection<ISeries> Series
         {
@@ -39,10 +41,9 @@ namespace MauiApp1.ViewModels
 
         private PieSeries<double> CreatePieSeries(DoughnutChartModel model)
         {
-
-            return new PieSeries<double>
+            var series = new PieSeries<double>
             {
-                Values = [model.Value],
+                Values = new double[] { model.Value },
                 MaxRadialColumnWidth = 25,
                 InnerRadius = 60,
                 Name = model.Label,
@@ -50,10 +51,18 @@ namespace MauiApp1.ViewModels
                 {
                     StrokeThickness = 2
                 },
+                IsHoverable = false,
             };
+
+            series.DataPointerDown += (sender, args) =>
+            {
+                SeriesClicked?.Invoke(this, model);
+            };
+
+            return series;
         }
 
-        public event PropertyChangedEventHandler? PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

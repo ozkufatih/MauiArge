@@ -22,7 +22,7 @@
             <!-- Container for Pie Chart and centered elements -->
             <Grid Grid.Row="1" Margin="10" HeightRequest="300" VerticalOptions="Start">
                 <!-- Pie Chart -->
-                <lvc:PieChart Series="{Binding Series}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"></lvc:PieChart>
+                <lvc:PieChart Series="{Binding Series}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
 
                 <!-- Centered Elements -->
                 <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
@@ -52,7 +52,7 @@
             <Button Text="Add Data" Clicked="OnAddValueClicked" Grid.Row="2" HorizontalOptions="Center" 
                     CornerRadius="20" BackgroundColor="#002c5f" TextColor="White" FontAttributes="Bold"/>
 
-            <controls:CategoryAssetView Grid.Row="3" />
+            <controls:CategoryAssetView x:Name="CategoryAssetView" Grid.Row="3" />
         </Grid>
     </ScrollView>
 
