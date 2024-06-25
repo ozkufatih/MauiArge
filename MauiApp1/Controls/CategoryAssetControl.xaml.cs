@@ -2,11 +2,11 @@ using MauiApp1.ViewModels;
 
 namespace MauiApp1.Controls;
 
-public partial class CategoryAssetView : ContentView
+public partial class CategoryAssetControl : ContentView
 {
 	private CategoryAssetViewModel _viewModel;
 
-    public CategoryAssetView()
+    public CategoryAssetControl()
 	{
 		InitializeComponent();
 

@@ -33,7 +33,7 @@ public partial class HomePage : ContentView
 
     private void OnSeriesClicked(object sender, DoughnutChartModel model)
     {
-        var viewModel = (CategoryAssetViewModel)CategoryAssetView.BindingContext;
+        var viewModel = (CategoryAssetViewModel)CategoryAssetControl.BindingContext;
         var category = viewModel.Categories.FirstOrDefault(c => c.Name == model.Label);
         if (category != null)
         {

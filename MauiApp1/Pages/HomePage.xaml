@@ -52,7 +52,7 @@
             <Button Text="Add Data" Clicked="OnAddValueClicked" Grid.Row="2" HorizontalOptions="Center" 
                     CornerRadius="20" BackgroundColor="#002c5f" TextColor="White" FontAttributes="Bold"/>
 
-            <controls:CategoryAssetView x:Name="CategoryAssetView" Grid.Row="3" />
+            <controls:CategoryAssetControl x:Name="CategoryAssetControl" Grid.Row="3" />
         </Grid>
     </ScrollView>
 
