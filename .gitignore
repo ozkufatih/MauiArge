@@ -361,6 +361,4 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-/MauiApp1/Controls/CategoryAssetControl.xaml.cs
-/MauiApp1/Pages/HomePage.xaml
-/MauiApp1/MauiApp1.csproj
+
