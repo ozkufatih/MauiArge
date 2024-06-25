@@ -30,33 +30,6 @@ namespace MauiApp1.ViewModels
                 CreatePieSeries(new DoughnutChartModel("Turkish Lira", 27.6)),
                 CreatePieSeries(new DoughnutChartModel("Crypto Currency", 70.7))
             };
-
-            // Subscribe to theme change events
-            Application.Current.RequestedThemeChanged += OnRequestedThemeChanged;
-        }
-
-        // Update the colors of the series when the theme changes
-        private void OnRequestedThemeChanged(object? sender, AppThemeChangedEventArgs e)
-        {
-            UpdateSeriesColors();
-        }
-
-        private void UpdateSeriesColors()
-        {
-            foreach (var series in Series.OfType<PieSeries<double>>())
-            {
-                series.DataLabelsPaint = GetDataLabelPaint();
-            }
-
-            // Trigger UI update
-            Series = new ObservableCollection<ISeries>(Series);
-        }
-
-        private SolidColorPaint GetDataLabelPaint()
-        {
-            return Application.Current.RequestedTheme == AppTheme.Dark
-                ? new SolidColorPaint(SKColors.White)
-                : new SolidColorPaint(SKColors.Black);
         }
 
         public void AddValue(DoughnutChartModel model)

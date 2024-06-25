@@ -80,6 +80,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Controls\CategoryAssetView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Controls\LogoControl.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
