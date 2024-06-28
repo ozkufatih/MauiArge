@@ -6,35 +6,35 @@ namespace MauiApp1.ViewModels
 {
     public class CategoryAssetViewModel : INotifyPropertyChanged
     {
-        public ObservableCollection<Category> Categories { get; set; }
+        public ObservableCollection<CategoryModel> Categories { get; set; }
 
         public CategoryAssetViewModel()
         {
-            Categories = new ObservableCollection<Category>
+            Categories = new ObservableCollection<CategoryModel>
             {
-                new Category
+                new CategoryModel
                 {
                     Name = "Turkish Lira",
-                    Assets = new ObservableCollection<Asset>
+                    Assets = new ObservableCollection<AssetModel>
                     {
-                        new Asset { Name = "Safe", Value = "1.000", ChangeValue = "0", ChangePercentage = "0" },
-                        new Asset { Name = "Safe", Value = "1.000", ChangeValue = "0", ChangePercentage = "0" }
+                        new AssetModel { Name = "Safe", Value = "1.000", ChangeValue = "0", ChangePercentage = "0" },
+                        new AssetModel { Name = "Safe", Value = "1.000", ChangeValue = "0", ChangePercentage = "0" }
                     }
                 },
-                new Category
+                new CategoryModel
                 {
                     Name = "Foreign Currency",
-                    Assets = new ObservableCollection<Asset>
+                    Assets = new ObservableCollection<AssetModel>
                     {
-                        new Asset { Name = "Asset 1", Value = "1.837", ChangeValue = "+356", ChangePercentage = "24.1" }
+                        new AssetModel { Name = "Asset 1", Value = "1.837", ChangeValue = "+356", ChangePercentage = "24.1" }
                     }
                 },
-                new Category
+                new CategoryModel
                 {
                     Name = "Crypto Currency",
-                    Assets = new ObservableCollection<Asset>
+                    Assets = new ObservableCollection<AssetModel>
                     {
-                        new Asset { Name = "Asset 1", Value = "1.118", ChangeValue = "+26", ChangePercentage = "2.3" }
+                        new AssetModel { Name = "Asset 1", Value = "1.118", ChangeValue = "+26", ChangePercentage = "2.3" }
                     }
                 }
             };
@@ -47,9 +47,9 @@ namespace MauiApp1.ViewModels
 
         private void OnCategoryPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            if (e.PropertyName == nameof(Category.IsExpanded))
+            if (e.PropertyName == nameof(CategoryModel.IsExpanded))
             {
-                var expandedCategory = sender as Category;
+                var expandedCategory = sender as CategoryModel;
                 if (expandedCategory != null && expandedCategory.IsExpanded)
                 {
                     foreach (var category in Categories)

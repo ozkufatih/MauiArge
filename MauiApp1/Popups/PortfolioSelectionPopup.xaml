@@ -7,7 +7,7 @@
     
     <VerticalStackLayout Padding="20" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent" HeightRequest="400">
         <Label Text="Merhaba, bu bir popup!" TextColor="Black" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-        <Button Text="Kapat" Clicked="OnCloseButtonClicked" />
+        <Button Margin="20" Text="Kapat" TextColor="White" Clicked="OnCloseButtonClicked" />
     </VerticalStackLayout>
     
 </toolkit:Popup>

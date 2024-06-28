@@ -1,6 +1,6 @@
 ﻿namespace MauiApp1.Models
 {
-    public class Asset
+    public class AssetModel
     {
         public string Name { get; set; }
         public string Value { get; set; }

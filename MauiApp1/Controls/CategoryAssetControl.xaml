@@ -8,7 +8,7 @@
 
     <CollectionView ItemsSource="{Binding Categories}">
         <CollectionView.ItemTemplate>
-            <DataTemplate x:DataType="models:Category">
+            <DataTemplate x:DataType="models:CategoryModel">
                 <toolkit:Expander IsExpanded="{Binding IsExpanded}">
                     <toolkit:Expander.Header>
                         <Frame x:Name="HeaderFrame" Padding="10" Margin="5" CornerRadius="10" BackgroundColor="#002c5f">
@@ -18,7 +18,7 @@
                     <toolkit:Expander.Content >
                         <CollectionView ItemsSource="{Binding Assets}">
                             <CollectionView.ItemTemplate>
-                                <DataTemplate x:DataType="models:Asset">
+                                <DataTemplate x:DataType="models:AssetModel">
                                     <Frame Padding="10" Margin="5" CornerRadius="10" BackgroundColor="#f0f0f0" WidthRequest="{Binding Source={x:Reference HeaderFrame}, Path=Width}">
                                         <StackLayout>
                                             <Label Text="PRICE" TextColor="Gray" FontSize="14" />

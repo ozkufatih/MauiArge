@@ -4,11 +4,11 @@ using System.Runtime.CompilerServices;
 
 namespace MauiApp1.Models
 {
-    public class Category : INotifyPropertyChanged
+    public class CategoryModel : INotifyPropertyChanged
     {
         private bool _isExpanded;
         public string Name { get; set; }
-        public ObservableCollection<Asset> Assets { get; set; }
+        public ObservableCollection<AssetModel> Assets { get; set; }
 
         public bool IsExpanded
         {
