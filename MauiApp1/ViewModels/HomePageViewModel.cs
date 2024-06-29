@@ -9,8 +9,24 @@ using System.Runtime.CompilerServices;
 
 namespace MauiApp1.ViewModels
 {
-    public class DoughnutChartViewModel : INotifyPropertyChanged
+    public class HomePageViewModel : INotifyPropertyChanged
     {
+        private string _selectedPortfolio;
+        public string SelectedPortfolio
+        {
+            get => _selectedPortfolio;
+            set
+            {
+                if (_selectedPortfolio != value)
+                {
+                    _selectedPortfolio = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        public ObservableCollection<PortfolioModel> Portfolios { get; set; }
+
         public event EventHandler<DoughnutChartModel> SeriesClicked;
 
         private ObservableCollection<ISeries> _series;
@@ -24,7 +40,7 @@ namespace MauiApp1.ViewModels
             }
         }
 
-        public DoughnutChartViewModel()
+        public HomePageViewModel()
         {
             Series = new ObservableCollection<ISeries>
             {
@@ -32,6 +48,13 @@ namespace MauiApp1.ViewModels
                 CreatePieSeries(new DoughnutChartModel("Turkish Lira", 27.6)),
                 CreatePieSeries(new DoughnutChartModel("Crypto Currency", 70.7))
             };
+
+            Portfolios = new ObservableCollection<PortfolioModel>
+            {
+                new PortfolioModel { Name = "Portfolyom LA GARDASIM BI BAH LA" },
+                new PortfolioModel { Name = "numero uno" }
+            };
+            SelectedPortfolio = Portfolios.FirstOrDefault()?.Name;
         }
 
         public void AddValue(DoughnutChartModel model)

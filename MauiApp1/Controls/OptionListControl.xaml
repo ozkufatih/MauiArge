@@ -20,7 +20,6 @@
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-
         </ListView>
     </VerticalStackLayout>
 </ContentView>

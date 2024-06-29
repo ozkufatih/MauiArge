@@ -27,8 +27,8 @@
                 <!-- Centered Elements -->
                 <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
                     <!-- Portfolio Selection -->
-                    <Button Text="Portfolio" Clicked="OnPortfolioSelectionClicked" HorizontalOptions="Center" 
-                            CornerRadius="20" BackgroundColor="#002c5f" TextColor="White" FontAttributes="Bold"/>
+                    <Button Text="{Binding SelectedPortfolio}" Clicked="OnPortfolioSelectionClicked" HorizontalOptions="Center" MaximumWidthRequest="130"
+                            CornerRadius="20" BackgroundColor="#002c5f" TextColor="White" FontAttributes="Bold" LineBreakMode="MiddleTruncation"/>
                     <!-- Total Value -->
                     <Label Text="8.635 TL" VerticalOptions="Center" HorizontalOptions="Center" FontSize="30" 
                            FontAttributes="Bold" TextColor="White"/>
@@ -50,9 +50,9 @@
 
             <!-- Debug: Add Data to Chart -->
             <Button Text="Add Data" Clicked="OnAddValueClicked" Grid.Row="2" HorizontalOptions="Center" 
-                    CornerRadius="20" BackgroundColor="#002c5f" TextColor="White" FontAttributes="Bold"/>
+                    CornerRadius="20" BackgroundColor="#002c5f" TextColor="White" FontAttributes="Bold" Margin="10"/>
 
-            <controls:CategoryAssetControl x:Name="CategoryAssetControl" Grid.Row="3" />
+            <controls:CategoryAssetControl x:Name="CategoryAssetControl" Grid.Row="3" Margin="10" />
         </Grid>
     </ScrollView>
 

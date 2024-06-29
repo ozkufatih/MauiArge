@@ -8,13 +8,13 @@ namespace MauiApp1.Pages;
 
 public partial class HomePage : ContentView
 {
-    private DoughnutChartViewModel _viewModel;
+    private HomePageViewModel _viewModel;
 
     public HomePage()
     {
         InitializeComponent();
 
-        _viewModel = new DoughnutChartViewModel();
+        _viewModel = new HomePageViewModel();
         _viewModel.SeriesClicked += OnSeriesClicked;
         BindingContext = _viewModel;
     }
@@ -28,7 +28,7 @@ public partial class HomePage : ContentView
 
     private void OnPortfolioSelectionClicked(object sender, EventArgs e)
     {
-        var popup = new PortfolioSelectionPopup();
+        var popup = new PortfolioSelectionPopup(_viewModel);       
         Application.Current.MainPage.ShowPopup(popup);
     }
 
