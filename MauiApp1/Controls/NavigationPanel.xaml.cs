@@ -1,4 +1,7 @@
 using MauiApp1.Pages;
+using MauiApp1.Services;
+using System.Reflection;
+using System.Resources;
 
 namespace MauiApp1.Controls
 {
@@ -6,6 +9,8 @@ namespace MauiApp1.Controls
     {
         public static readonly BindableProperty ContentViewContainerProperty =
             BindableProperty.Create(nameof(ContentViewContainer), typeof(ContentView), typeof(NavigationPanel), null);
+
+        private ResourceManager _resourceManager;
 
         public ContentView ContentViewContainer
         {
@@ -16,16 +21,17 @@ namespace MauiApp1.Controls
         public NavigationPanel()
         {
             InitializeComponent();
+            _resourceManager = new ResourceManagerService().resourceManager;
             InitializeButtons();
         }
 
         private void InitializeButtons()
         {
-            AddButton("Add", 0, (_, __) => { });
-            AddButton("Status", 1, (_, __) => { });
-            AddButton("Home", 2, OnHomeClicked);
-            AddButton("Performers", 3, (_, __) => { });
-            AddButton("Options", 4, OnOptionsClicked);
+            AddButton(_resourceManager.GetString("NavBarAddBtn"), 0, (_, __) => { });
+            AddButton(_resourceManager.GetString("NavBarStatusBtn"), 1, (_, __) => { });
+            AddButton(_resourceManager.GetString("NavBarHomeBtn"), 2, OnHomeClicked);
+            AddButton(_resourceManager.GetString("NavBarPerformersBtn"), 3, (_, __) => { });
+            AddButton(_resourceManager.GetString("NavBarOptionsBtn"), 4, OnOptionsClicked);
             // If you add button don't forget to add ColumnDefinition in xaml
             // And don't forget to add handler for button click
         }

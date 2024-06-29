@@ -3,11 +3,11 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-    x:Class="MauiApp1.Popups.PortfolioSelectionPopup">
+    x:Class="MauiApp1.Popups.OptionsLanguageSelectPopup">
 
     <VerticalStackLayout Padding="20" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent" >
         <Label x:Name="PopUpTitle" TextColor="Black" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-        <ListView x:Name="PortfolioList" HeightRequest="250" ItemsSource="{Binding Portfolios}" Margin="20" ItemSelected="PortfolioList_ItemSelected">
+        <ListView x:Name="LanguageList" HeightRequest="250" ItemsSource="{Binding Languages}" Margin="20" ItemSelected="LanguageList_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -21,9 +21,8 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
-            <Button x:Name="PopUpCloseBtn" Margin="20" Grid.Column="0" TextColor="White" Clicked="OnCloseButtonClicked" />
-            <Button x:Name="PopUpCreateBtn" Margin="20" Grid.Column="1" TextColor="White"/>
+            <Button x:Name="PopUpCloseBtn" Margin="20" Grid.Column="0" TextColor="White" Clicked="PopUpCloseBtn_Clicked" />
         </Grid>
     </VerticalStackLayout>
-    
+
 </toolkit:Popup>

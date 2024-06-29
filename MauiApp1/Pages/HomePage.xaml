@@ -28,7 +28,7 @@
                 <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
                     <!-- Portfolio Selection -->
                     <Button Text="{Binding SelectedPortfolio}" Clicked="OnPortfolioSelectionClicked" HorizontalOptions="Center" MaximumWidthRequest="130"
-                            CornerRadius="20" BackgroundColor="#002c5f" TextColor="White" FontAttributes="Bold" LineBreakMode="MiddleTruncation"/>
+                            CornerRadius="20" BackgroundColor="#002c5f" TextColor="White" FontAttributes="Bold" LineBreakMode="TailTruncation"/>
                     <!-- Total Value -->
                     <Label Text="8.635 TL" VerticalOptions="Center" HorizontalOptions="Center" FontSize="30" 
                            FontAttributes="Bold" TextColor="White"/>

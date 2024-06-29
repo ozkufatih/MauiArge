@@ -9,9 +9,7 @@ namespace MauiApp1
             InitializeComponent();
 
             ContentViewContainer.Content = new HomePage();
-        }
-
-        
+        }   
     }
 
 }

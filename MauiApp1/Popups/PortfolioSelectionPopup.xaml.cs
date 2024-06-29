@@ -2,20 +2,30 @@ using CommunityToolkit.Maui.Views;
 using MauiApp1.Models;
 using MauiApp1.Services;
 using MauiApp1.ViewModels;
+using System.Resources;
 
 namespace MauiApp1.Popups;
 
 public partial class PortfolioSelectionPopup : Popup
 {
     HomePageViewModel HomePageViewModel;
+    ResourceManager _resourceManager;
 
-	public PortfolioSelectionPopup(HomePageViewModel viewModel)
-	{
-		InitializeComponent();
+    public PortfolioSelectionPopup(HomePageViewModel viewModel)
+    {
+        InitializeComponent();
+        _resourceManager = new ResourceManagerService().resourceManager;
+        InitializeButtons();
         HomePageViewModel = viewModel;
         BindingContext = HomePageViewModel;
- 
-	}
+    }
+
+    private void InitializeButtons()
+    {
+        PopUpCloseBtn.Text = _resourceManager.GetString("PortfolioListPopupCloseBtn");
+        PopUpCreateBtn.Text = _resourceManager.GetString("PortfolioListPopupCreateBtn");
+        PopUpTitle.Text = _resourceManager.GetString("PortfolioListPopupTitle");
+    }
 
     private void OnCloseButtonClicked(object sender, EventArgs e)
     {
@@ -24,9 +34,9 @@ public partial class PortfolioSelectionPopup : Popup
 
     private void PortfolioList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
     {
-        if (e.SelectedItem is PortfolioModel model) 
-        { 
-        HomePageViewModel.SelectedPortfolio = model.Name;
+        if (e.SelectedItem is PortfolioModel model)
+        {
+            HomePageViewModel.SelectedPortfolio = model.Name;
         }
         Close();
     }
