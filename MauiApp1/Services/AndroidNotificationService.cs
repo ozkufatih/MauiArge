@@ -21,7 +21,7 @@ namespace MauiApp1.Services
                     _resourceManagerService.resourceManager.GetString("OptionsNotificationsGoToSettings"),
                     _resourceManagerService.resourceManager.GetString("MessageCANCEL")
                 );
-                //TODO: ADD THIS BULLSHIT TO RESOURCES >:(
+
                 if (userNavigatedToSettings)
                 {
                     OpenAppSettings();
