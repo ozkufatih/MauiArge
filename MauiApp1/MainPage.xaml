@@ -20,6 +20,6 @@
         </ContentView>
 
         <!-- Navigation Panel -->
-        <controls:NavigationPanel Grid.Row="1" ContentViewContainer="{Binding Source={x:Reference ContentViewContainer}}" />
+        <ContentView x:Name="NavigationPanelPlaceholder" Grid.Row="1" />
     </Grid>
 </ContentPage>

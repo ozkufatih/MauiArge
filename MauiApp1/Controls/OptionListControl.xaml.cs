@@ -12,11 +12,11 @@ public partial class OptionListControl : ContentView
     OptionsViewModel _viewModel;
     private ResourceManagerService _resourceManagerService;
 
-    public OptionListControl()
+    public OptionListControl(ResourceManagerService resourceManagerService)
     {
         InitializeComponent();
-        _resourceManagerService = new ResourceManagerService();
-        _viewModel = new OptionsViewModel();
+        _resourceManagerService = resourceManagerService;
+        _viewModel = new OptionsViewModel(_resourceManagerService);
         BindingContext = _viewModel;
     }
 
@@ -26,7 +26,7 @@ public partial class OptionListControl : ContentView
         {
             if (selectedItem.Name == _resourceManagerService.resourceManager.GetString("OptionsNotificationMenu"))
             {
-                await AndroidNotificationService.HandleNotificationPermission(selectedItem);
+                await AndroidNotificationService.HandleNotificationPermission(selectedItem,_resourceManagerService);
             }
             else if (selectedItem.Name == _resourceManagerService.resourceManager.GetString("OptionsLanguageMenu")){
                 var popup = new OptionsLanguageSelectPopup(_viewModel,_resourceManagerService);

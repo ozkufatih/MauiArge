@@ -117,11 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="LanguageListPopupCloseBtn" xml:space="preserve">
-    <value>Close</value>
+  <data name="AreYouSureTitle" xml:space="preserve">
+    <value>Are you sure?</value>
+  </data>
+  <data name="LanguageListPopupRestartMessage" xml:space="preserve">
+    <value>Are you sure to change the language to %%1</value>
   </data>
   <data name="LanguageListPopupTitle" xml:space="preserve">
     <value>Choose a language</value>
+  </data>
+  <data name="MessageCANCEL" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="MessageOK" xml:space="preserve">
+    <value>Okay</value>
   </data>
   <data name="NavBarAddBtn" xml:space="preserve">
     <value>Add</value>
@@ -157,13 +166,22 @@
   <data name="OptionsNotificationsChecking" xml:space="preserve">
     <value>Checking</value>
   </data>
+  <data name="OptionsNotificationsDeniedMessage" xml:space="preserve">
+    <value>Notification permission is required. Please enable it in the app settings.</value>
+  </data>
+  <data name="OptionsNotificationsDeniedTitle" xml:space="preserve">
+    <value>Permission Denied</value>
+  </data>
   <data name="OptionsNotificationsDisabled" xml:space="preserve">
     <value>Denied</value>
   </data>
   <data name="OptionsNotificationsEnabled" xml:space="preserve">
     <value>Granted</value>
   </data>
-  <data name="PortfolioListPopupCloseBtn" xml:space="preserve">
+  <data name="OptionsNotificationsGoToSettings" xml:space="preserve">
+    <value>Go to Settings</value>
+  </data>
+  <data name="PopupCloseBtn" xml:space="preserve">
     <value>Close</value>
   </data>
   <data name="PortfolioListPopupCreateBtn" xml:space="preserve">

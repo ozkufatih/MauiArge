@@ -2,14 +2,13 @@
 using MauiApp1.Services;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Resources;
 using System.Runtime.CompilerServices;
 
 namespace MauiApp1.ViewModels
 {
     public class OptionsViewModel : INotifyPropertyChanged
     {
-        private ResourceManager resourceManager;
+        private ResourceManagerService _resourceManagerService;
         private string AppLang;
         private ObservableCollection<OptionModel> _options { get; set; }
         public ObservableCollection<OptionModel> Options
@@ -35,9 +34,9 @@ namespace MauiApp1.ViewModels
 
         }
 
-        public OptionsViewModel()
+        public OptionsViewModel(ResourceManagerService resourceManagerService)
         {
-            resourceManager = new ResourceManagerService().resourceManager;
+            _resourceManagerService = resourceManagerService;
 
             if (Preferences.Get("AppLanguage", "tr") == "tr")
             {
@@ -54,14 +53,14 @@ namespace MauiApp1.ViewModels
         private void InitializeOptions()
         {
             Options = new ObservableCollection<OptionModel>() {
-                new OptionModel(resourceManager.GetString("OptionsNotificationMenu"),resourceManager.GetString("OptionsNotificationsChecking")),
-                new OptionModel(resourceManager.GetString("OptionsLanguageMenu"),resourceManager.GetString(AppLang)),
-                new OptionModel(resourceManager.GetString("OptionsCurrencyMenu"),"TL")
+                new OptionModel(_resourceManagerService.resourceManager.GetString("OptionsNotificationMenu"),_resourceManagerService.resourceManager.GetString("OptionsNotificationsChecking")),
+                new OptionModel(_resourceManagerService.resourceManager.GetString("OptionsLanguageMenu"),_resourceManagerService.resourceManager.GetString(AppLang)),
+                new OptionModel(_resourceManagerService.resourceManager.GetString("OptionsCurrencyMenu"),"TL")
             };
 
             Languages = new ObservableCollection<LanguageModel>() {
-           new LanguageModel(resourceManager.GetString("OptionsLanguagesTR"),"tr"),
-           new LanguageModel(resourceManager.GetString("OptionsLanguagesEN"),"en"),
+           new LanguageModel(_resourceManagerService.resourceManager.GetString("OptionsLanguagesTR"),"tr"),
+           new LanguageModel(_resourceManagerService.resourceManager.GetString("OptionsLanguagesEN"),"en"),
             };
         }
 

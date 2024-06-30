@@ -6,19 +6,22 @@ namespace MauiApp1.Services
 {
     public class AndroidNotificationService
     {
-        public static async Task HandleNotificationPermission(OptionModel selectedItem)
+        private static ResourceManagerService _resourceManagerService;
+        public static async Task HandleNotificationPermission(OptionModel selectedItem, ResourceManagerService resourceManagerService)
         {
+            _resourceManagerService = resourceManagerService;
+
             bool permissionGranted = await RequestNotificationPermissionAsync();
 
             if (!permissionGranted)
             {
                 bool userNavigatedToSettings = await MessageService.ShowMessageAsync(
-                    "Permission Denied",
-                    "Notification permission is required. Please enable it in the app settings.",
-                    "Go to Settings",
-                    "Cancel"
+                    _resourceManagerService.resourceManager.GetString("OptionsNotificationsDeniedTitle"),
+                    _resourceManagerService.resourceManager.GetString("OptionsNotificationsDeniedMessage"),
+                    _resourceManagerService.resourceManager.GetString("OptionsNotificationsGoToSettings"),
+                    _resourceManagerService.resourceManager.GetString("MessageCANCEL")
                 );
-
+                //TODO: ADD THIS BULLSHIT TO RESOURCES >:(
                 if (userNavigatedToSettings)
                 {
                     OpenAppSettings();
@@ -31,7 +34,7 @@ namespace MauiApp1.Services
                 }
             }
 
-            selectedItem.Value = permissionGranted ? "Granted" : "Permission denied";
+            selectedItem.Value = permissionGranted ? _resourceManagerService.resourceManager.GetString("OptionsNotificationsEnabled") : _resourceManagerService.resourceManager.GetString("OptionsNotificationsDisabled");
         }
 
         private static async Task<bool> RequestNotificationPermissionAsync()

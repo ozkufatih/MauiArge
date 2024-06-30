@@ -12,6 +12,7 @@ namespace MauiApp1
             App.Current.UserAppTheme = AppTheme.Dark;
 
             MainPage = new AppShell();
+            
 
             if (!Preferences.ContainsKey("AppLanguage")) {
 

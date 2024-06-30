@@ -61,11 +61,20 @@ namespace MauiApp1.Resources.Strings.tr {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Kapat.
+        ///   Looks up a localized string similar to Emin misin?.
         /// </summary>
-        public static string LanguageListPopupCloseBtn {
+        public static string AreYouSureTitle {
             get {
-                return ResourceManager.GetString("LanguageListPopupCloseBtn", resourceCulture);
+                return ResourceManager.GetString("AreYouSureTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dili %%1 ile değiştirmek istediğinden emin misin?.
+        /// </summary>
+        public static string LanguageListPopupRestartMessage {
+            get {
+                return ResourceManager.GetString("LanguageListPopupRestartMessage", resourceCulture);
             }
         }
         
@@ -75,6 +84,24 @@ namespace MauiApp1.Resources.Strings.tr {
         public static string LanguageListPopupTitle {
             get {
                 return ResourceManager.GetString("LanguageListPopupTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to İptal Et.
+        /// </summary>
+        public static string MessageCANCEL {
+            get {
+                return ResourceManager.GetString("MessageCANCEL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tamam.
+        /// </summary>
+        public static string MessageOK {
+            get {
+                return ResourceManager.GetString("MessageOK", resourceCulture);
             }
         }
         
@@ -178,6 +205,24 @@ namespace MauiApp1.Resources.Strings.tr {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bildirim izni gerekiyor. Lütfen uygulama ayarlarından izin verin..
+        /// </summary>
+        public static string OptionsNotificationsDeniedMessage {
+            get {
+                return ResourceManager.GetString("OptionsNotificationsDeniedMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to İzin Verilmedi.
+        /// </summary>
+        public static string OptionsNotificationsDeniedTitle {
+            get {
+                return ResourceManager.GetString("OptionsNotificationsDeniedTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Reddedildi.
         /// </summary>
         public static string OptionsNotificationsDisabled {
@@ -196,11 +241,20 @@ namespace MauiApp1.Resources.Strings.tr {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ayarlara git.
+        /// </summary>
+        public static string OptionsNotificationsGoToSettings {
+            get {
+                return ResourceManager.GetString("OptionsNotificationsGoToSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Kapat.
         /// </summary>
-        public static string PortfolioListPopupCloseBtn {
+        public static string PopupCloseBtn {
             get {
-                return ResourceManager.GetString("PortfolioListPopupCloseBtn", resourceCulture);
+                return ResourceManager.GetString("PopupCloseBtn", resourceCulture);
             }
         }
         

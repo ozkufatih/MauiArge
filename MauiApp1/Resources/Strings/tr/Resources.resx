@@ -117,11 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="LanguageListPopupCloseBtn" xml:space="preserve">
-    <value>Kapat</value>
+  <data name="AreYouSureTitle" xml:space="preserve">
+    <value>Emin misin?</value>
+  </data>
+  <data name="LanguageListPopupRestartMessage" xml:space="preserve">
+    <value>Dili %%1 ile değiştirmek istediğinden emin misin?</value>
   </data>
   <data name="LanguageListPopupTitle" xml:space="preserve">
     <value>Bir dil seç</value>
+  </data>
+  <data name="MessageCANCEL" xml:space="preserve">
+    <value>İptal Et</value>
+  </data>
+  <data name="MessageOK" xml:space="preserve">
+    <value>Tamam</value>
   </data>
   <data name="NavBarAddBtn" xml:space="preserve">
     <value>Ekle</value>
@@ -157,13 +166,22 @@
   <data name="OptionsNotificationsChecking" xml:space="preserve">
     <value>Kontrol Ediliyor</value>
   </data>
+  <data name="OptionsNotificationsDeniedMessage" xml:space="preserve">
+    <value>Bildirim izni gerekiyor. Lütfen uygulama ayarlarından izin verin.</value>
+  </data>
+  <data name="OptionsNotificationsDeniedTitle" xml:space="preserve">
+    <value>İzin Verilmedi</value>
+  </data>
   <data name="OptionsNotificationsDisabled" xml:space="preserve">
     <value>Reddedildi</value>
   </data>
   <data name="OptionsNotificationsEnabled" xml:space="preserve">
     <value>İzin Verildi</value>
   </data>
-  <data name="PortfolioListPopupCloseBtn" xml:space="preserve">
+  <data name="OptionsNotificationsGoToSettings" xml:space="preserve">
+    <value>Ayarlara git</value>
+  </data>
+  <data name="PopupCloseBtn" xml:space="preserve">
     <value>Kapat</value>
   </data>
   <data name="PortfolioListPopupCreateBtn" xml:space="preserve">

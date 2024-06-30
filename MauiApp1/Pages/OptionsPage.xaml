@@ -7,7 +7,7 @@
     <ScrollView>
         <VerticalStackLayout>
             <controls:LogoControl Margin="20"/>
-            <controls:OptionListControl/>
+            <ContentView x:Name="OptionListControlPlaceholder"/>
         </VerticalStackLayout>
     </ScrollView>
     

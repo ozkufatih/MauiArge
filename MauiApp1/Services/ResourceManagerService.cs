@@ -41,8 +41,11 @@ namespace MauiApp1.Services
             return Preferences.Get("AppLanguage", "tr");
         }
 
-        public void reloadResources() {
+        public void reloadResources()
+        {
             InitializeResourceManager();
+            Application.Current.MainPage = new MainPage(); //temporary solution...
+
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;

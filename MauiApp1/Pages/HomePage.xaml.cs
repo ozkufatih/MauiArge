@@ -2,6 +2,7 @@ using CommunityToolkit.Maui.Views;
 using MauiApp1.Controls;
 using MauiApp1.Models;
 using MauiApp1.Popups;
+using MauiApp1.Services;
 using MauiApp1.ViewModels;
 
 namespace MauiApp1.Pages;
@@ -9,13 +10,15 @@ namespace MauiApp1.Pages;
 public partial class HomePage : ContentView
 {
     private HomePageViewModel _viewModel;
+    private ResourceManagerService _resourceManagerService;
 
-    public HomePage()
+    public HomePage(ResourceManagerService resourceManager)
     {
         InitializeComponent();
 
         _viewModel = new HomePageViewModel();
         _viewModel.SeriesClicked += OnSeriesClicked;
+        _resourceManagerService = resourceManager;
         BindingContext = _viewModel;
     }
 
@@ -28,7 +31,7 @@ public partial class HomePage : ContentView
 
     private void OnPortfolioSelectionClicked(object sender, EventArgs e)
     {
-        var popup = new PortfolioSelectionPopup(_viewModel);       
+        var popup = new PortfolioSelectionPopup(_viewModel,_resourceManagerService);       
         Application.Current.MainPage.ShowPopup(popup);
     }
 

@@ -1,7 +1,5 @@
 using MauiApp1.Pages;
 using MauiApp1.Services;
-using System.Reflection;
-using System.Resources;
 
 namespace MauiApp1.Controls
 {
@@ -10,7 +8,7 @@ namespace MauiApp1.Controls
         public static readonly BindableProperty ContentViewContainerProperty =
             BindableProperty.Create(nameof(ContentViewContainer), typeof(ContentView), typeof(NavigationPanel), null);
 
-        private ResourceManager _resourceManager;
+        private ResourceManagerService _resourceManagerService;
 
         public ContentView ContentViewContainer
         {
@@ -18,20 +16,20 @@ namespace MauiApp1.Controls
             set => SetValue(ContentViewContainerProperty, value);
         }
 
-        public NavigationPanel()
+        public NavigationPanel(ResourceManagerService resourceManagerService)
         {
             InitializeComponent();
-            _resourceManager = new ResourceManagerService().resourceManager;
+            _resourceManagerService = resourceManagerService;
             InitializeButtons();
         }
 
         private void InitializeButtons()
         {
-            AddButton(_resourceManager.GetString("NavBarAddBtn"), 0, (_, __) => { });
-            AddButton(_resourceManager.GetString("NavBarStatusBtn"), 1, (_, __) => { });
-            AddButton(_resourceManager.GetString("NavBarHomeBtn"), 2, OnHomeClicked);
-            AddButton(_resourceManager.GetString("NavBarPerformersBtn"), 3, (_, __) => { });
-            AddButton(_resourceManager.GetString("NavBarOptionsBtn"), 4, OnOptionsClicked);
+            AddButton(_resourceManagerService.resourceManager.GetString("NavBarAddBtn"), 0, (_, __) => { });
+            AddButton(_resourceManagerService.resourceManager.GetString("NavBarStatusBtn"), 1, (_, __) => { });
+            AddButton(_resourceManagerService.resourceManager.GetString("NavBarHomeBtn"), 2, OnHomeClicked);
+            AddButton(_resourceManagerService.resourceManager.GetString("NavBarPerformersBtn"), 3, (_, __) => { });
+            AddButton(_resourceManagerService.resourceManager.GetString("NavBarOptionsBtn"), 4, OnOptionsClicked);
             // If you add button don't forget to add ColumnDefinition in xaml
             // And don't forget to add handler for button click
         }
@@ -53,7 +51,7 @@ namespace MauiApp1.Controls
         {
             if (ContentViewContainer != null)
             {
-                ContentViewContainer.Content = new HomePage();
+                ContentViewContainer.Content = new HomePage(_resourceManagerService);
             }
         }
 
@@ -61,7 +59,7 @@ namespace MauiApp1.Controls
         {
             if (ContentViewContainer != null)
             {
-                ContentViewContainer.Content = new OptionsPage();
+                ContentViewContainer.Content = new OptionsPage(_resourceManagerService);
             }
         }
     }

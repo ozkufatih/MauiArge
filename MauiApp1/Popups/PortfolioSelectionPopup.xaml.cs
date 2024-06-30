@@ -9,12 +9,12 @@ namespace MauiApp1.Popups;
 public partial class PortfolioSelectionPopup : Popup
 {
     HomePageViewModel HomePageViewModel;
-    ResourceManager _resourceManager;
+    ResourceManagerService _resourceManagerService;
 
-    public PortfolioSelectionPopup(HomePageViewModel viewModel)
+    public PortfolioSelectionPopup(HomePageViewModel viewModel, ResourceManagerService resourceManagerService)
     {
         InitializeComponent();
-        _resourceManager = new ResourceManagerService().resourceManager;
+        _resourceManagerService = resourceManagerService;
         InitializeButtons();
         HomePageViewModel = viewModel;
         BindingContext = HomePageViewModel;
@@ -22,9 +22,9 @@ public partial class PortfolioSelectionPopup : Popup
 
     private void InitializeButtons()
     {
-        PopUpCloseBtn.Text = _resourceManager.GetString("PortfolioListPopupCloseBtn");
-        PopUpCreateBtn.Text = _resourceManager.GetString("PortfolioListPopupCreateBtn");
-        PopUpTitle.Text = _resourceManager.GetString("PortfolioListPopupTitle");
+        PopUpCloseBtn.Text = _resourceManagerService.resourceManager.GetString("PopupCloseBtn");
+        PopUpCreateBtn.Text = _resourceManagerService.resourceManager.GetString("PortfolioListPopupCreateBtn");
+        PopUpTitle.Text = _resourceManagerService.resourceManager.GetString("PortfolioListPopupTitle");
     }
 
     private void OnCloseButtonClicked(object sender, EventArgs e)
