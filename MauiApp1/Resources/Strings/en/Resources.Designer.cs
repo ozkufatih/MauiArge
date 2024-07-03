@@ -70,6 +70,78 @@ namespace MauiApp1.Resources.Strings.en {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Commodity.
+        /// </summary>
+        public static string CategoriesCommodity {
+            get {
+                return ResourceManager.GetString("CategoriesCommodity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Crypto Currency.
+        /// </summary>
+        public static string CategoriesCryptoCurrency {
+            get {
+                return ResourceManager.GetString("CategoriesCryptoCurrency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Eurobond.
+        /// </summary>
+        public static string CategoriesEurobond {
+            get {
+                return ResourceManager.GetString("CategoriesEurobond", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Foreign Currency.
+        /// </summary>
+        public static string CategoriesForeignCurrency {
+            get {
+                return ResourceManager.GetString("CategoriesForeignCurrency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fund.
+        /// </summary>
+        public static string CategoriesFund {
+            get {
+                return ResourceManager.GetString("CategoriesFund", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stock.
+        /// </summary>
+        public static string CategoriesStock {
+            get {
+                return ResourceManager.GetString("CategoriesStock", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turkish Lira.
+        /// </summary>
+        public static string CategoriesTurkishLira {
+            get {
+                return ResourceManager.GetString("CategoriesTurkishLira", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to US Exchanges.
+        /// </summary>
+        public static string CategoriesUSExchanges {
+            get {
+                return ResourceManager.GetString("CategoriesUSExchanges", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Are you sure to change the language to %%1.
         /// </summary>
         public static string LanguageListPopupRestartMessage {

@@ -120,6 +120,30 @@
   <data name="AreYouSureTitle" xml:space="preserve">
     <value>Emin misin?</value>
   </data>
+  <data name="CategoriesCommodity" xml:space="preserve">
+    <value>Emtia</value>
+  </data>
+  <data name="CategoriesCryptoCurrency" xml:space="preserve">
+    <value>Kripto Para</value>
+  </data>
+  <data name="CategoriesEurobond" xml:space="preserve">
+    <value>Eurobond</value>
+  </data>
+  <data name="CategoriesForeignCurrency" xml:space="preserve">
+    <value>Döviz</value>
+  </data>
+  <data name="CategoriesFund" xml:space="preserve">
+    <value>Fon</value>
+  </data>
+  <data name="CategoriesStock" xml:space="preserve">
+    <value>Hisse Senedi</value>
+  </data>
+  <data name="CategoriesTurkishLira" xml:space="preserve">
+    <value>Türk Lirası</value>
+  </data>
+  <data name="CategoriesUSExchanges" xml:space="preserve">
+    <value>A.B.D. Borsaları</value>
+  </data>
   <data name="LanguageListPopupRestartMessage" xml:space="preserve">
     <value>Dili %%1 ile değiştirmek istediğinden emin misin?</value>
   </data>

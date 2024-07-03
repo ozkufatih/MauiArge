@@ -120,6 +120,30 @@
   <data name="AreYouSureTitle" xml:space="preserve">
     <value>Are you sure?</value>
   </data>
+  <data name="CategoriesCommodity" xml:space="preserve">
+    <value>Commodity</value>
+  </data>
+  <data name="CategoriesCryptoCurrency" xml:space="preserve">
+    <value>Crypto Currency</value>
+  </data>
+  <data name="CategoriesEurobond" xml:space="preserve">
+    <value>Eurobond</value>
+  </data>
+  <data name="CategoriesForeignCurrency" xml:space="preserve">
+    <value>Foreign Currency</value>
+  </data>
+  <data name="CategoriesFund" xml:space="preserve">
+    <value>Fund</value>
+  </data>
+  <data name="CategoriesStock" xml:space="preserve">
+    <value>Stock</value>
+  </data>
+  <data name="CategoriesTurkishLira" xml:space="preserve">
+    <value>Turkish Lira</value>
+  </data>
+  <data name="CategoriesUSExchanges" xml:space="preserve">
+    <value>US Exchanges</value>
+  </data>
   <data name="LanguageListPopupRestartMessage" xml:space="preserve">
     <value>Are you sure to change the language to %%1</value>
   </data>

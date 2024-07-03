@@ -25,7 +25,7 @@ namespace MauiApp1.Controls
 
         private void InitializeButtons()
         {
-            AddButton(_resourceManagerService.resourceManager.GetString("NavBarAddBtn"), 0, (_, __) => { });
+            AddButton(_resourceManagerService.resourceManager.GetString("NavBarAddBtn"), 0, OnAddAssetsClicked);
             AddButton(_resourceManagerService.resourceManager.GetString("NavBarStatusBtn"), 1, (_, __) => { });
             AddButton(_resourceManagerService.resourceManager.GetString("NavBarHomeBtn"), 2, OnHomeClicked);
             AddButton(_resourceManagerService.resourceManager.GetString("NavBarPerformersBtn"), 3, (_, __) => { });
@@ -60,6 +60,14 @@ namespace MauiApp1.Controls
             if (ContentViewContainer != null)
             {
                 ContentViewContainer.Content = new OptionsPage(_resourceManagerService);
+            }
+        }
+
+        private void OnAddAssetsClicked(object? sender, EventArgs e) 
+        {
+            if (ContentViewContainer != null)
+            {
+                ContentViewContainer.Content = new AddAssetPage(_resourceManagerService);
             }
         }
     }
