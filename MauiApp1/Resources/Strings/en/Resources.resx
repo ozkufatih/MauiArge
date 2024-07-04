@@ -172,8 +172,14 @@
   <data name="NavBarStatusBtn" xml:space="preserve">
     <value>Status</value>
   </data>
+  <data name="OptionsAbout" xml:space="preserve">
+    <value>About</value>
+  </data>
   <data name="OptionsCurrencyMenu" xml:space="preserve">
     <value>Currency</value>
+  </data>
+  <data name="OptionsInvite" xml:space="preserve">
+    <value>Invite Friends</value>
   </data>
   <data name="OptionsLanguageMenu" xml:space="preserve">
     <value>Language</value>
@@ -204,6 +210,9 @@
   </data>
   <data name="OptionsNotificationsGoToSettings" xml:space="preserve">
     <value>Go to Settings</value>
+  </data>
+  <data name="OptionsSupport" xml:space="preserve">
+    <value>Support</value>
   </data>
   <data name="PopupCloseBtn" xml:space="preserve">
     <value>Close</value>

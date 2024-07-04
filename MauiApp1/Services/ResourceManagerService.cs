@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using MauiApp1.Controls;
+using System.ComponentModel;
 using System.Reflection;
 using System.Resources;
 using System.Runtime.CompilerServices;
@@ -7,7 +8,7 @@ namespace MauiApp1.Services
 {
     public class ResourceManagerService : INotifyPropertyChanged
     {
-
+       
         private ResourceManager _resourceManager { get; set; }
         public ResourceManager resourceManager
         {

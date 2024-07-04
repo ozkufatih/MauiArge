@@ -34,7 +34,7 @@ namespace MauiApp1.Models
             }
         }
 
-        public OptionModel(string name, string value)
+        public OptionModel(string name, string value="")
         {
             _name = name;
             _value = value;

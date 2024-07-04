@@ -5,13 +5,24 @@
              x:Class="MauiApp1.Controls.AddAssetControl">
     <FlexLayout>
         <ListView x:Name="CategoryListView" Grid.Row="1" ItemsSource="{Binding Categories}" VerticalOptions="FillAndExpand"
-              SelectedItem="{Binding SelectedCategory, Mode=TwoWay}" ItemTapped="ListView_ItemTapped"
-              RowHeight="75">
+              SelectedItem="{Binding SelectedCategory, Mode=TwoWay}" ItemTapped="ListView_ItemTapped" VerticalScrollBarVisibility="Never"
+              HorizontalScrollBarVisibility="Never" RowHeight="75">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <!--Buraya resim gelecek-->
-                        <Label Text="{Binding Name}" TextColor="White" Padding="20" FontSize="25" VerticalOptions="Center"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <!--Icon Placeholder-->
+                            <Label Grid.Column="0" Grid.Row="1" Text="{Binding Name}" TextColor="White" Padding="10" FontSize="18" FontAttributes="Bold" VerticalTextAlignment="Center"/>
+                            <Label Grid.Column="1" Grid.Row="1" Text=">" TextColor="#90FFFFFF" Padding="20" FontSize="25" VerticalTextAlignment="Center"/>
+                        </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>

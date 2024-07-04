@@ -223,11 +223,29 @@ namespace MauiApp1.Resources.Strings.tr {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Uygulama Hakkında.
+        /// </summary>
+        public static string OptionsAbout {
+            get {
+                return ResourceManager.GetString("OptionsAbout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Para Birimi.
         /// </summary>
         public static string OptionsCurrencyMenu {
             get {
                 return ResourceManager.GetString("OptionsCurrencyMenu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Arkadaşlarına Öner.
+        /// </summary>
+        public static string OptionsInvite {
+            get {
+                return ResourceManager.GetString("OptionsInvite", resourceCulture);
             }
         }
         
@@ -318,6 +336,15 @@ namespace MauiApp1.Resources.Strings.tr {
         public static string OptionsNotificationsGoToSettings {
             get {
                 return ResourceManager.GetString("OptionsNotificationsGoToSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Destek.
+        /// </summary>
+        public static string OptionsSupport {
+            get {
+                return ResourceManager.GetString("OptionsSupport", resourceCulture);
             }
         }
         

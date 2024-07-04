@@ -55,7 +55,11 @@ namespace MauiApp1.ViewModels
             Options = new ObservableCollection<OptionModel>() {
                 new OptionModel(_resourceManagerService.resourceManager.GetString("OptionsNotificationMenu"),_resourceManagerService.resourceManager.GetString("OptionsNotificationsChecking")),
                 new OptionModel(_resourceManagerService.resourceManager.GetString("OptionsLanguageMenu"),_resourceManagerService.resourceManager.GetString(AppLang)),
-                new OptionModel(_resourceManagerService.resourceManager.GetString("OptionsCurrencyMenu"),"TL")
+                new OptionModel(_resourceManagerService.resourceManager.GetString("OptionsCurrencyMenu"),"TL"),
+                new OptionModel(_resourceManagerService.resourceManager.GetString("OptionsSupport")),
+                new OptionModel(_resourceManagerService.resourceManager.GetString("OptionsInvite")),
+                new OptionModel(_resourceManagerService.resourceManager.GetString("OptionsAbout"))
+
             };
 
             Languages = new ObservableCollection<LanguageModel>() {

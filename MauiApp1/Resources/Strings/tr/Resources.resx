@@ -172,8 +172,14 @@
   <data name="NavBarStatusBtn" xml:space="preserve">
     <value>Durum</value>
   </data>
+  <data name="OptionsAbout" xml:space="preserve">
+    <value>Uygulama Hakkında</value>
+  </data>
   <data name="OptionsCurrencyMenu" xml:space="preserve">
     <value>Para Birimi</value>
+  </data>
+  <data name="OptionsInvite" xml:space="preserve">
+    <value>Arkadaşlarına Öner</value>
   </data>
   <data name="OptionsLanguageMenu" xml:space="preserve">
     <value>Dil</value>
@@ -204,6 +210,9 @@
   </data>
   <data name="OptionsNotificationsGoToSettings" xml:space="preserve">
     <value>Ayarlara git</value>
+  </data>
+  <data name="OptionsSupport" xml:space="preserve">
+    <value>Destek</value>
   </data>
   <data name="PopupCloseBtn" xml:space="preserve">
     <value>Kapat</value>
