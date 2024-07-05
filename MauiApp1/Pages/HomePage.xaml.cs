@@ -11,7 +11,7 @@ public partial class HomePage : ContentView
 {
     private HomePageViewModel _viewModel;
     private ResourceManagerService _resourceManagerService;
-
+    private bool _isPortfolioSelectionPopupOpen = false;
     public HomePage(ResourceManagerService resourceManager)
     {
         InitializeComponent();
@@ -31,8 +31,14 @@ public partial class HomePage : ContentView
 
     private void OnPortfolioSelectionClicked(object sender, EventArgs e)
     {
+        if (_isPortfolioSelectionPopupOpen)
+            return;
+
+        _isPortfolioSelectionPopupOpen = true;
+
         var popup = new PortfolioSelectionPopup(_viewModel,_resourceManagerService);       
         Application.Current.MainPage.ShowPopup(popup);
+        popup.Closed += (s, args) => _isPortfolioSelectionPopupOpen = false;
     }
 
     private void OnSeriesClicked(object sender, DoughnutChartModel model)
