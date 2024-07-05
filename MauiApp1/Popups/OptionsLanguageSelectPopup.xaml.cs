@@ -16,7 +16,7 @@ public partial class OptionsLanguageSelectPopup : Popup
         BindingContext = _viewModel;
 
         _resourceManagerService = resourceManagerService;
-        InitializeButtons();
+        InitializeStrings();
     }
 
     private async void LanguageList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -47,10 +47,10 @@ public partial class OptionsLanguageSelectPopup : Popup
         }
     }
 
-    private void InitializeButtons()
+    private void InitializeStrings()
     {
-        PopUpCloseBtn.Text = _resourceManagerService.resourceManager.GetString("PopupCloseBtn");
-        PopUpTitle.Text = _resourceManagerService.resourceManager.GetString("LanguageListPopupTitle");
+        PopUpCloseBtn.Text = _resourceManagerService.Resources.GetString("PopupCloseBtn");
+        PopUpTitle.Text = _resourceManagerService.Resources.GetString("LanguageListPopupTitle");
     }
 
     private void PopUpCloseBtn_Clicked(object sender, EventArgs e)
@@ -60,11 +60,11 @@ public partial class OptionsLanguageSelectPopup : Popup
 
     private async Task<bool> ShowWarning(string lang)
     {
-        string title = _resourceManagerService.resourceManager.GetString("AreYouSureTitle");
-        string message = _resourceManagerService.resourceManager.GetString("LanguageListPopupRestartMessage");
+        string title = _resourceManagerService.Resources.GetString("AreYouSureTitle");
+        string message = _resourceManagerService.Resources.GetString("LanguageListPopupRestartMessage");
         message = message.Replace("%%1", lang);
-        string button1 = _resourceManagerService.resourceManager.GetString("MessageOK");
-        string button2 = _resourceManagerService.resourceManager.GetString("MessageCANCEL");
+        string button1 = _resourceManagerService.Resources.GetString("MessageOK");
+        string button2 = _resourceManagerService.Resources.GetString("MessageCANCEL");
 
         bool result = await MessageService.ShowMessageAsync(title, message, button1, button2);
         return result;

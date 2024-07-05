@@ -24,11 +24,11 @@ public partial class OptionListControl : ContentView
     {
         if (sender is ViewCell viewCell && viewCell.BindingContext is OptionModel selectedItem)
         {
-            if (selectedItem.Name == _resourceManagerService.resourceManager.GetString("OptionsNotificationMenu"))
+            if (selectedItem.Name == _resourceManagerService.Resources.GetString("OptionsNotificationMenu"))
             {
                 await AndroidNotificationService.HandleNotificationPermission(selectedItem,_resourceManagerService);
             }
-            else if (selectedItem.Name == _resourceManagerService.resourceManager.GetString("OptionsLanguageMenu")){
+            else if (selectedItem.Name == _resourceManagerService.Resources.GetString("OptionsLanguageMenu")){
                 var popup = new OptionsLanguageSelectPopup(_viewModel,_resourceManagerService);
                 Application.Current.MainPage.ShowPopup(popup);
             }
@@ -41,9 +41,9 @@ public partial class OptionListControl : ContentView
 
         foreach (var item in listView.ItemsSource)
         {
-            if (item is OptionModel option && option.Name == _resourceManagerService.resourceManager.GetString("OptionsNotificationMenu"))
+            if (item is OptionModel option && option.Name == _resourceManagerService.Resources.GetString("OptionsNotificationMenu"))
             {
-                option.Value = status == PermissionStatus.Granted ? _resourceManagerService.resourceManager.GetString("OptionsNotificationsEnabled") : _resourceManagerService.resourceManager.GetString("OptionsNotificationsDisabled");
+                option.Value = status == PermissionStatus.Granted ? _resourceManagerService.Resources.GetString("OptionsNotificationsEnabled") : _resourceManagerService.Resources.GetString("OptionsNotificationsDisabled");
             }
         }
     }

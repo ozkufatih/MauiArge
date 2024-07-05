@@ -18,13 +18,13 @@ public partial class CreatePortfolioPopup : Popup
 	}
     private void InitializeStrings()
     {
-        PopUpCloseBtn.Text = _resourceManagerService.resourceManager.GetString("PopupCloseBtn");
-        PopUpCreateBtn.Text = _resourceManagerService.resourceManager.GetString("CreatePortfolioPopupCreateBtn");
-        PopUpTitle.Text = _resourceManagerService.resourceManager.GetString("CreatePortfolioPopupTitle");
-        PortfolioNameLabel.Text = _resourceManagerService.resourceManager.GetString("CreatePortfolioPopupCreateNameLabel");
-        PortfolioNameEntry.Placeholder = _resourceManagerService.resourceManager.GetString("CreatePortfolioPopupCreateEntryPlaceholder");
-        PortfolioSettingsLabel.Text = _resourceManagerService.resourceManager.GetString("CreatePortfolioSettingsLabel");
-        PortfolioIncludeInConsolidatedLabel.Text = _resourceManagerService.resourceManager.GetString("CreatePortfolioPopupCreateIncludeInConsolidatedLabel");
+        PopUpCloseBtn.Text = _resourceManagerService.Resources.GetString("PopupCloseBtn");
+        PopUpCreateBtn.Text = _resourceManagerService.Resources.GetString("CreatePortfolioPopupCreateBtn");
+        PopUpTitle.Text = _resourceManagerService.Resources.GetString("CreatePortfolioPopupTitle");
+        PortfolioNameLabel.Text = _resourceManagerService.Resources.GetString("CreatePortfolioPopupCreateNameLabel");
+        PortfolioNameEntry.Placeholder = _resourceManagerService.Resources.GetString("CreatePortfolioPopupCreateEntryPlaceholder");
+        PortfolioSettingsLabel.Text = _resourceManagerService.Resources.GetString("CreatePortfolioSettingsLabel");
+        PortfolioIncludeInConsolidatedLabel.Text = _resourceManagerService.Resources.GetString("CreatePortfolioPopupCreateIncludeInConsolidatedLabel");
     }
 
     private void OnCloseButtonClicked(object sender, EventArgs e)

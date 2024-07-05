@@ -31,14 +31,14 @@ namespace MauiApp1.ViewModels
         {
             Categories = new ObservableCollection<CategoryModel>()
             {
-            new CategoryModel(){ Name = _resourceManagerService.resourceManager.GetString("CategoriesTurkishLira") },
-            new CategoryModel(){ Name = _resourceManagerService.resourceManager.GetString("CategoriesStock") },
-            new CategoryModel(){ Name = _resourceManagerService.resourceManager.GetString("CategoriesCommodity") },
-            new CategoryModel(){ Name = _resourceManagerService.resourceManager.GetString("CategoriesForeignCurrency") },
-            new CategoryModel(){ Name = _resourceManagerService.resourceManager.GetString("CategoriesFund") },
-            new CategoryModel(){ Name = _resourceManagerService.resourceManager.GetString("CategoriesEurobond") },
-            new CategoryModel(){ Name = _resourceManagerService.resourceManager.GetString("CategoriesCryptoCurrency") },
-            new CategoryModel(){ Name = _resourceManagerService.resourceManager.GetString("CategoriesUSExchanges") },
+            new CategoryModel(){ Name = _resourceManagerService.Resources.GetString("CategoriesTurkishLira") },
+            new CategoryModel(){ Name = _resourceManagerService.Resources.GetString("CategoriesStock") },
+            new CategoryModel(){ Name = _resourceManagerService.Resources.GetString("CategoriesCommodity") },
+            new CategoryModel(){ Name = _resourceManagerService.Resources.GetString("CategoriesForeignCurrency") },
+            new CategoryModel(){ Name = _resourceManagerService.Resources.GetString("CategoriesFund") },
+            new CategoryModel(){ Name = _resourceManagerService.Resources.GetString("CategoriesEurobond") },
+            new CategoryModel(){ Name = _resourceManagerService.Resources.GetString("CategoriesCryptoCurrency") },
+            new CategoryModel(){ Name = _resourceManagerService.Resources.GetString("CategoriesUSExchanges") },
 
             };
         }

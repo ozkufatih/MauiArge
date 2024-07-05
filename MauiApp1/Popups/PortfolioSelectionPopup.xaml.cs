@@ -22,9 +22,9 @@ public partial class PortfolioSelectionPopup : Popup
 
     private void InitializeButtons()
     {
-        PopUpCloseBtn.Text = _resourceManagerService.resourceManager.GetString("PopupCloseBtn");
-        PopUpCreateBtn.Text = _resourceManagerService.resourceManager.GetString("PortfolioListPopupCreateBtn");
-        PopUpTitle.Text = _resourceManagerService.resourceManager.GetString("PortfolioListPopupTitle");
+        PopUpCloseBtn.Text = _resourceManagerService.Resources.GetString("PopupCloseBtn");
+        PopUpCreateBtn.Text = _resourceManagerService.Resources.GetString("PortfolioListPopupCreateBtn");
+        PopUpTitle.Text = _resourceManagerService.Resources.GetString("PortfolioListPopupTitle");
     }
 
     private void OnCloseButtonClicked(object sender, EventArgs e)

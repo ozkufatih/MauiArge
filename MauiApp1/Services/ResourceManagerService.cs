@@ -9,13 +9,13 @@ namespace MauiApp1.Services
     public class ResourceManagerService : INotifyPropertyChanged
     {
        
-        private ResourceManager _resourceManager { get; set; }
-        public ResourceManager resourceManager
+        private ResourceManager _resources { get; set; }
+        public ResourceManager Resources
         {
-            get => _resourceManager;
+            get => _resources;
             set
             {
-                _resourceManager = value;
+                _resources = value;
                 OnPropertyChanged();
             }
         }
@@ -29,11 +29,11 @@ namespace MauiApp1.Services
         {
             if (getLanguage() == "tr")
             {
-                resourceManager = new ResourceManager("MauiApp1.Resources.Strings.tr.Resources", Assembly.GetExecutingAssembly());
+                Resources = new ResourceManager("MauiApp1.Resources.Strings.tr.Resources", Assembly.GetExecutingAssembly());
             }
             else if (getLanguage() == "en")
             {
-                resourceManager = new ResourceManager("MauiApp1.Resources.Strings.en.Resources", Assembly.GetExecutingAssembly());
+                Resources = new ResourceManager("MauiApp1.Resources.Strings.en.Resources", Assembly.GetExecutingAssembly());
             }
         }
 

@@ -16,10 +16,10 @@ namespace MauiApp1.Services
             if (!permissionGranted)
             {
                 bool userNavigatedToSettings = await MessageService.ShowMessageAsync(
-                    _resourceManagerService.resourceManager.GetString("OptionsNotificationsDeniedTitle"),
-                    _resourceManagerService.resourceManager.GetString("OptionsNotificationsDeniedMessage"),
-                    _resourceManagerService.resourceManager.GetString("OptionsNotificationsGoToSettings"),
-                    _resourceManagerService.resourceManager.GetString("MessageCANCEL")
+                    _resourceManagerService.Resources.GetString("OptionsNotificationsDeniedTitle"),
+                    _resourceManagerService.Resources.GetString("OptionsNotificationsDeniedMessage"),
+                    _resourceManagerService.Resources.GetString("OptionsNotificationsGoToSettings"),
+                    _resourceManagerService.Resources.GetString("MessageCANCEL")
                 );
 
                 if (userNavigatedToSettings)
@@ -34,7 +34,7 @@ namespace MauiApp1.Services
                 }
             }
 
-            selectedItem.Value = permissionGranted ? _resourceManagerService.resourceManager.GetString("OptionsNotificationsEnabled") : _resourceManagerService.resourceManager.GetString("OptionsNotificationsDisabled");
+            selectedItem.Value = permissionGranted ? _resourceManagerService.Resources.GetString("OptionsNotificationsEnabled") : _resourceManagerService.Resources.GetString("OptionsNotificationsDisabled");
         }
 
         private static async Task<bool> RequestNotificationPermissionAsync()

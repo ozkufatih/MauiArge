@@ -28,11 +28,11 @@ namespace MauiApp1.Controls
 
         private void InitializeButtons()
         {
-            AddButton(_resourceManagerService.resourceManager.GetString("NavBarAddBtn"), 0, OnAddAssetsClicked);
-            AddButton(_resourceManagerService.resourceManager.GetString("NavBarStatusBtn"), 1, (_, __) => { });
-            AddButton(_resourceManagerService.resourceManager.GetString("NavBarHomeBtn"), 2, OnHomeClicked);
-            AddButton(_resourceManagerService.resourceManager.GetString("NavBarPerformersBtn"), 3, (_, __) => { });
-            AddButton(_resourceManagerService.resourceManager.GetString("NavBarOptionsBtn"), 4, OnOptionsClicked);
+            AddButton(_resourceManagerService.Resources.GetString("NavBarAddBtn"), 0, OnAddAssetsClicked);
+            AddButton(_resourceManagerService.Resources.GetString("NavBarStatusBtn"), 1, (_, __) => { });
+            AddButton(_resourceManagerService.Resources.GetString("NavBarHomeBtn"), 2, OnHomeClicked);
+            AddButton(_resourceManagerService.Resources.GetString("NavBarPerformersBtn"), 3, (_, __) => { });
+            AddButton(_resourceManagerService.Resources.GetString("NavBarOptionsBtn"), 4, OnOptionsClicked);
             // If you add button don't forget to add ColumnDefinition in xaml
             // And don't forget to add handler for button click
         }
