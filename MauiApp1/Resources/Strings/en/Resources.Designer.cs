@@ -142,6 +142,60 @@ namespace MauiApp1.Resources.Strings.en {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Create.
+        /// </summary>
+        public static string CreatePortfolioPopupCreateBtn {
+            get {
+                return ResourceManager.GetString("CreatePortfolioPopupCreateBtn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name your portfolio.
+        /// </summary>
+        public static string CreatePortfolioPopupCreateEntryPlaceholder {
+            get {
+                return ResourceManager.GetString("CreatePortfolioPopupCreateEntryPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Include in Consolidated Portfolios.
+        /// </summary>
+        public static string CreatePortfolioPopupCreateIncludeInConsolidatedLabel {
+            get {
+                return ResourceManager.GetString("CreatePortfolioPopupCreateIncludeInConsolidatedLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Portfolio Name.
+        /// </summary>
+        public static string CreatePortfolioPopupCreateNameLabel {
+            get {
+                return ResourceManager.GetString("CreatePortfolioPopupCreateNameLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create a new portfolio.
+        /// </summary>
+        public static string CreatePortfolioPopupTitle {
+            get {
+                return ResourceManager.GetString("CreatePortfolioPopupTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Settings.
+        /// </summary>
+        public static string CreatePortfolioSettingsLabel {
+            get {
+                return ResourceManager.GetString("CreatePortfolioSettingsLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Are you sure to change the language to %%1.
         /// </summary>
         public static string LanguageListPopupRestartMessage {

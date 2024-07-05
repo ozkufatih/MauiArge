@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="MauiApp1.Popups.CreatePortfolioPopup">
+    <VerticalStackLayout Padding="20" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent" >
+        <Label x:Name="PopUpTitle" TextColor="Black" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" x:Name="PortfolioNameLabel" Margin="0,20,0,10" TextColor="DarkBlue" FontAttributes="Bold" FontSize="20"/>
+            <Entry Grid.Row="1" x:Name="PortfolioNameEntry" TextColor="Black" FontAttributes="Bold"/>
+            <Label Grid.Row="2" x:Name="PortfolioSettingsLabel" Text="Settings" Margin="0,20,0,10" TextColor="DarkBlue" FontAttributes="Bold" FontSize="20"/>
+            <Label Grid.Row="3" Grid.Column="0" x:Name="PortfolioIncludeInConsolidatedLabel" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="Black"/>
+            <Switch Grid.Row="3" Grid.Column="1" x:Name="PortfolioIncludeInConsolidatedSwitch" Margin="10,0,0,0" ThumbColor="DarkBlue"/>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button x:Name="PopUpCloseBtn" Margin="20" Grid.Column="0" TextColor="White" Clicked="OnCloseButtonClicked" />
+            <Button x:Name="PopUpCreateBtn" Margin="20" Grid.Column="1" TextColor="White" Clicked="OnCreateButtonClicked"/>
+        </Grid>
+    </VerticalStackLayout>
+</toolkit:Popup>

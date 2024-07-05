@@ -144,6 +144,24 @@
   <data name="CategoriesUSExchanges" xml:space="preserve">
     <value>US Exchanges</value>
   </data>
+  <data name="CreatePortfolioPopupCreateBtn" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="CreatePortfolioPopupCreateEntryPlaceholder" xml:space="preserve">
+    <value>Name your portfolio</value>
+  </data>
+  <data name="CreatePortfolioPopupCreateIncludeInConsolidatedLabel" xml:space="preserve">
+    <value>Include in Consolidated Portfolios</value>
+  </data>
+  <data name="CreatePortfolioPopupCreateNameLabel" xml:space="preserve">
+    <value>Portfolio Name</value>
+  </data>
+  <data name="CreatePortfolioPopupTitle" xml:space="preserve">
+    <value>Create a new portfolio</value>
+  </data>
+  <data name="CreatePortfolioSettingsLabel" xml:space="preserve">
+    <value>Settings</value>
+  </data>
   <data name="LanguageListPopupRestartMessage" xml:space="preserve">
     <value>Are you sure to change the language to %%1</value>
   </data>

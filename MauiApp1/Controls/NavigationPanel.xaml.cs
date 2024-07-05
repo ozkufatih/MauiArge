@@ -10,6 +10,8 @@ namespace MauiApp1.Controls
 
         private ResourceManagerService _resourceManagerService;
 
+        private string CurrentPage;
+
         public ContentView ContentViewContainer
         {
             get => (ContentView)GetValue(ContentViewContainerProperty);
@@ -21,6 +23,7 @@ namespace MauiApp1.Controls
             InitializeComponent();
             _resourceManagerService = resourceManagerService;
             InitializeButtons();
+            CurrentPage = "HomePage";
         }
 
         private void InitializeButtons()
@@ -51,7 +54,12 @@ namespace MauiApp1.Controls
         {
             if (ContentViewContainer != null)
             {
-                ContentViewContainer.Content = new HomePage(_resourceManagerService);
+                if (CurrentPage != "HomePage") 
+                {
+                    ContentViewContainer.Content = new HomePage(_resourceManagerService);
+                    CurrentPage = "HomePage";
+                }
+
             }
         }
 
@@ -59,7 +67,11 @@ namespace MauiApp1.Controls
         {
             if (ContentViewContainer != null)
             {
-                ContentViewContainer.Content = new OptionsPage(_resourceManagerService);
+                if(CurrentPage != "OptionsPage")
+                {
+                    ContentViewContainer.Content = new OptionsPage(_resourceManagerService);
+                    CurrentPage = "OptionsPage";
+                }
             }
         }
 
@@ -67,7 +79,10 @@ namespace MauiApp1.Controls
         {
             if (ContentViewContainer != null)
             {
-                ContentViewContainer.Content = new AddAssetPage(_resourceManagerService);
+                if (CurrentPage != "AddAssetsPage") { 
+                    ContentViewContainer.Content = new AddAssetPage(_resourceManagerService);
+                    CurrentPage = "AddAssetsPage";
+                }
             }
         }
     }

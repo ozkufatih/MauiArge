@@ -142,6 +142,60 @@ namespace MauiApp1.Resources.Strings.tr {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Oluştur.
+        /// </summary>
+        public static string CreatePortfolioPopupCreateBtn {
+            get {
+                return ResourceManager.GetString("CreatePortfolioPopupCreateBtn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Portföyüne bir isim ver.
+        /// </summary>
+        public static string CreatePortfolioPopupCreateEntryPlaceholder {
+            get {
+                return ResourceManager.GetString("CreatePortfolioPopupCreateEntryPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Portföyler Toplamı&apos;na dahil et.
+        /// </summary>
+        public static string CreatePortfolioPopupCreateIncludeInConsolidatedLabel {
+            get {
+                return ResourceManager.GetString("CreatePortfolioPopupCreateIncludeInConsolidatedLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Portföy İsmi.
+        /// </summary>
+        public static string CreatePortfolioPopupCreateNameLabel {
+            get {
+                return ResourceManager.GetString("CreatePortfolioPopupCreateNameLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yeni bir portfolyo oluştur.
+        /// </summary>
+        public static string CreatePortfolioPopupTitle {
+            get {
+                return ResourceManager.GetString("CreatePortfolioPopupTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Seçenekler.
+        /// </summary>
+        public static string CreatePortfolioSettingsLabel {
+            get {
+                return ResourceManager.GetString("CreatePortfolioSettingsLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Dili %%1 ile değiştirmek istediğinden emin misin?.
         /// </summary>
         public static string LanguageListPopupRestartMessage {
@@ -358,7 +412,7 @@ namespace MauiApp1.Resources.Strings.tr {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Yeni bir portfolyo yarat.
+        ///   Looks up a localized string similar to Yeni bir portfolyo oluştur.
         /// </summary>
         public static string PortfolioListPopupCreateBtn {
             get {

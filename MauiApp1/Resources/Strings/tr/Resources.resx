@@ -144,6 +144,24 @@
   <data name="CategoriesUSExchanges" xml:space="preserve">
     <value>A.B.D. Borsaları</value>
   </data>
+  <data name="CreatePortfolioPopupCreateBtn" xml:space="preserve">
+    <value>Oluştur</value>
+  </data>
+  <data name="CreatePortfolioPopupCreateEntryPlaceholder" xml:space="preserve">
+    <value>Portföyüne bir isim ver</value>
+  </data>
+  <data name="CreatePortfolioPopupCreateIncludeInConsolidatedLabel" xml:space="preserve">
+    <value>Portföyler Toplamı'na dahil et</value>
+  </data>
+  <data name="CreatePortfolioPopupCreateNameLabel" xml:space="preserve">
+    <value>Portföy İsmi</value>
+  </data>
+  <data name="CreatePortfolioPopupTitle" xml:space="preserve">
+    <value>Yeni bir portfolyo oluştur</value>
+  </data>
+  <data name="CreatePortfolioSettingsLabel" xml:space="preserve">
+    <value>Seçenekler</value>
+  </data>
   <data name="LanguageListPopupRestartMessage" xml:space="preserve">
     <value>Dili %%1 ile değiştirmek istediğinden emin misin?</value>
   </data>
@@ -218,7 +236,7 @@
     <value>Kapat</value>
   </data>
   <data name="PortfolioListPopupCreateBtn" xml:space="preserve">
-    <value>Yeni bir portfolyo yarat</value>
+    <value>Yeni bir portfolyo oluştur</value>
   </data>
   <data name="PortfolioListPopupTitle" xml:space="preserve">
     <value>Bir portfolyo seç</value>
